@@ -167,6 +167,16 @@ REST_FRAMEWORK = {
 
     'DEFAULT_SCHEMA_CLASS':
         'drf_spectacular.openapi.AutoSchema',
+
+    # JWT Authentication
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ],
+
+    # Require authentication for API endpoints
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
 }
 
 
@@ -176,6 +186,6 @@ REST_FRAMEWORK = {
 
 SPECTACULAR_SETTINGS = {
     'TITLE': 'College Management API',
-    'DESCRIPTION': 'Django + MongoDB CRUD API',
+    'DESCRIPTION': 'Django + MongoDB CRUD API with JWT Authentication',
     'VERSION': '1.0.0',
 }
