@@ -1,0 +1,4 @@
+Django==6.1.1
+djangorestframework
+drf-spectacular
+pymongo==4.18.1
